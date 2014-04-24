@@ -21,6 +21,10 @@
 		43D11F811908A5580062E001 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43D11F631908A5580062E001 /* UIKit.framework */; };
 		43D11F891908A5590062E001 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 43D11F871908A5590062E001 /* InfoPlist.strings */; };
 		43D11F8B1908A5590062E001 /* MultipeerNTPTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 43D11F8A1908A5590062E001 /* MultipeerNTPTests.m */; };
+		43D11F981908A5CB0062E001 /* BRMultipeerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 43D11F971908A5CB0062E001 /* BRMultipeerManager.m */; };
+		43D11F9E1908A5FA0062E001 /* NetworkClock.m in Sources */ = {isa = PBXBuildFile; fileRef = 43D11F9B1908A5FA0062E001 /* NetworkClock.m */; };
+		43D11F9F1908A5FA0062E001 /* NetAssociation.m in Sources */ = {isa = PBXBuildFile; fileRef = 43D11F9D1908A5FA0062E001 /* NetAssociation.m */; };
+		43D11FA21908A60A0062E001 /* AsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 43D11FA11908A60A0062E001 /* AsyncUdpSocket.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +57,14 @@
 		43D11F861908A5590062E001 /* MultipeerNTPTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MultipeerNTPTests-Info.plist"; sourceTree = "<group>"; };
 		43D11F881908A5590062E001 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		43D11F8A1908A5590062E001 /* MultipeerNTPTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MultipeerNTPTests.m; sourceTree = "<group>"; };
+		43D11F961908A5CB0062E001 /* BRMultipeerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRMultipeerManager.h; sourceTree = "<group>"; };
+		43D11F971908A5CB0062E001 /* BRMultipeerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRMultipeerManager.m; sourceTree = "<group>"; };
+		43D11F9A1908A5FA0062E001 /* NetworkClock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkClock.h; sourceTree = "<group>"; };
+		43D11F9B1908A5FA0062E001 /* NetworkClock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkClock.m; sourceTree = "<group>"; };
+		43D11F9C1908A5FA0062E001 /* NetAssociation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetAssociation.h; sourceTree = "<group>"; };
+		43D11F9D1908A5FA0062E001 /* NetAssociation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetAssociation.m; sourceTree = "<group>"; };
+		43D11FA01908A60A0062E001 /* AsyncUdpSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsyncUdpSocket.h; sourceTree = "<group>"; };
+		43D11FA11908A60A0062E001 /* AsyncUdpSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AsyncUdpSocket.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +96,7 @@
 			children = (
 				43D11F651908A5580062E001 /* MultipeerNTP */,
 				43D11F841908A5580062E001 /* MultipeerNTPTests */,
+				43D11F991908A5E30062E001 /* 3rd-party */,
 				43D11F5E1908A5580062E001 /* Frameworks */,
 				43D11F5D1908A5580062E001 /* Products */,
 			);
@@ -112,11 +125,11 @@
 		43D11F651908A5580062E001 /* MultipeerNTP */ = {
 			isa = PBXGroup;
 			children = (
+				43D11F951908A5B60062E001 /* Model */,
+				43D11F941908A5A20062E001 /* ViewControllers */,
 				43D11F6E1908A5580062E001 /* BRAppDelegate.h */,
 				43D11F6F1908A5580062E001 /* BRAppDelegate.m */,
 				43D11F711908A5580062E001 /* Main.storyboard */,
-				43D11F741908A5580062E001 /* BRViewController.h */,
-				43D11F751908A5580062E001 /* BRViewController.m */,
 				43D11F771908A5580062E001 /* Images.xcassets */,
 				43D11F661908A5580062E001 /* Supporting Files */,
 			);
@@ -150,6 +163,37 @@
 				43D11F871908A5590062E001 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		43D11F941908A5A20062E001 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				43D11F741908A5580062E001 /* BRViewController.h */,
+				43D11F751908A5580062E001 /* BRViewController.m */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		43D11F951908A5B60062E001 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				43D11F961908A5CB0062E001 /* BRMultipeerManager.h */,
+				43D11F971908A5CB0062E001 /* BRMultipeerManager.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		43D11F991908A5E30062E001 /* 3rd-party */ = {
+			isa = PBXGroup;
+			children = (
+				43D11FA01908A60A0062E001 /* AsyncUdpSocket.h */,
+				43D11FA11908A60A0062E001 /* AsyncUdpSocket.m */,
+				43D11F9A1908A5FA0062E001 /* NetworkClock.h */,
+				43D11F9B1908A5FA0062E001 /* NetworkClock.m */,
+				43D11F9C1908A5FA0062E001 /* NetAssociation.h */,
+				43D11F9D1908A5FA0062E001 /* NetAssociation.m */,
+			);
+			name = "3rd-party";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -251,8 +295,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				43D11F761908A5580062E001 /* BRViewController.m in Sources */,
+				43D11F981908A5CB0062E001 /* BRMultipeerManager.m in Sources */,
+				43D11F9E1908A5FA0062E001 /* NetworkClock.m in Sources */,
 				43D11F701908A5580062E001 /* BRAppDelegate.m in Sources */,
 				43D11F6C1908A5580062E001 /* main.m in Sources */,
+				43D11F9F1908A5FA0062E001 /* NetAssociation.m in Sources */,
+				43D11FA21908A60A0062E001 /* AsyncUdpSocket.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
