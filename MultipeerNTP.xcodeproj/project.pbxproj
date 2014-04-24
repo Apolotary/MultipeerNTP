@@ -1,0 +1,472 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		43D11F601908A5580062E001 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43D11F5F1908A5580062E001 /* Foundation.framework */; };
+		43D11F621908A5580062E001 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43D11F611908A5580062E001 /* CoreGraphics.framework */; };
+		43D11F641908A5580062E001 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43D11F631908A5580062E001 /* UIKit.framework */; };
+		43D11F6A1908A5580062E001 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 43D11F681908A5580062E001 /* InfoPlist.strings */; };
+		43D11F6C1908A5580062E001 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 43D11F6B1908A5580062E001 /* main.m */; };
+		43D11F701908A5580062E001 /* BRAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 43D11F6F1908A5580062E001 /* BRAppDelegate.m */; };
+		43D11F731908A5580062E001 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43D11F711908A5580062E001 /* Main.storyboard */; };
+		43D11F761908A5580062E001 /* BRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43D11F751908A5580062E001 /* BRViewController.m */; };
+		43D11F781908A5580062E001 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43D11F771908A5580062E001 /* Images.xcassets */; };
+		43D11F7F1908A5580062E001 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43D11F7E1908A5580062E001 /* XCTest.framework */; };
+		43D11F801908A5580062E001 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43D11F5F1908A5580062E001 /* Foundation.framework */; };
+		43D11F811908A5580062E001 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43D11F631908A5580062E001 /* UIKit.framework */; };
+		43D11F891908A5590062E001 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 43D11F871908A5590062E001 /* InfoPlist.strings */; };
+		43D11F8B1908A5590062E001 /* MultipeerNTPTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 43D11F8A1908A5590062E001 /* MultipeerNTPTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		43D11F821908A5580062E001 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 43D11F541908A5580062E001 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 43D11F5B1908A5580062E001;
+			remoteInfo = MultipeerNTP;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		43D11F5C1908A5580062E001 /* MultipeerNTP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MultipeerNTP.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		43D11F5F1908A5580062E001 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		43D11F611908A5580062E001 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		43D11F631908A5580062E001 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		43D11F671908A5580062E001 /* MultipeerNTP-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MultipeerNTP-Info.plist"; sourceTree = "<group>"; };
+		43D11F691908A5580062E001 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		43D11F6B1908A5580062E001 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		43D11F6D1908A5580062E001 /* MultipeerNTP-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MultipeerNTP-Prefix.pch"; sourceTree = "<group>"; };
+		43D11F6E1908A5580062E001 /* BRAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BRAppDelegate.h; sourceTree = "<group>"; };
+		43D11F6F1908A5580062E001 /* BRAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BRAppDelegate.m; sourceTree = "<group>"; };
+		43D11F721908A5580062E001 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		43D11F741908A5580062E001 /* BRViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BRViewController.h; sourceTree = "<group>"; };
+		43D11F751908A5580062E001 /* BRViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BRViewController.m; sourceTree = "<group>"; };
+		43D11F771908A5580062E001 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		43D11F7D1908A5580062E001 /* MultipeerNTPTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MultipeerNTPTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		43D11F7E1908A5580062E001 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		43D11F861908A5590062E001 /* MultipeerNTPTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MultipeerNTPTests-Info.plist"; sourceTree = "<group>"; };
+		43D11F881908A5590062E001 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		43D11F8A1908A5590062E001 /* MultipeerNTPTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MultipeerNTPTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		43D11F591908A5580062E001 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43D11F621908A5580062E001 /* CoreGraphics.framework in Frameworks */,
+				43D11F641908A5580062E001 /* UIKit.framework in Frameworks */,
+				43D11F601908A5580062E001 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		43D11F7A1908A5580062E001 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43D11F7F1908A5580062E001 /* XCTest.framework in Frameworks */,
+				43D11F811908A5580062E001 /* UIKit.framework in Frameworks */,
+				43D11F801908A5580062E001 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		43D11F531908A5580062E001 = {
+			isa = PBXGroup;
+			children = (
+				43D11F651908A5580062E001 /* MultipeerNTP */,
+				43D11F841908A5580062E001 /* MultipeerNTPTests */,
+				43D11F5E1908A5580062E001 /* Frameworks */,
+				43D11F5D1908A5580062E001 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		43D11F5D1908A5580062E001 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				43D11F5C1908A5580062E001 /* MultipeerNTP.app */,
+				43D11F7D1908A5580062E001 /* MultipeerNTPTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		43D11F5E1908A5580062E001 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				43D11F5F1908A5580062E001 /* Foundation.framework */,
+				43D11F611908A5580062E001 /* CoreGraphics.framework */,
+				43D11F631908A5580062E001 /* UIKit.framework */,
+				43D11F7E1908A5580062E001 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		43D11F651908A5580062E001 /* MultipeerNTP */ = {
+			isa = PBXGroup;
+			children = (
+				43D11F6E1908A5580062E001 /* BRAppDelegate.h */,
+				43D11F6F1908A5580062E001 /* BRAppDelegate.m */,
+				43D11F711908A5580062E001 /* Main.storyboard */,
+				43D11F741908A5580062E001 /* BRViewController.h */,
+				43D11F751908A5580062E001 /* BRViewController.m */,
+				43D11F771908A5580062E001 /* Images.xcassets */,
+				43D11F661908A5580062E001 /* Supporting Files */,
+			);
+			path = MultipeerNTP;
+			sourceTree = "<group>";
+		};
+		43D11F661908A5580062E001 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				43D11F671908A5580062E001 /* MultipeerNTP-Info.plist */,
+				43D11F681908A5580062E001 /* InfoPlist.strings */,
+				43D11F6B1908A5580062E001 /* main.m */,
+				43D11F6D1908A5580062E001 /* MultipeerNTP-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		43D11F841908A5580062E001 /* MultipeerNTPTests */ = {
+			isa = PBXGroup;
+			children = (
+				43D11F8A1908A5590062E001 /* MultipeerNTPTests.m */,
+				43D11F851908A5590062E001 /* Supporting Files */,
+			);
+			path = MultipeerNTPTests;
+			sourceTree = "<group>";
+		};
+		43D11F851908A5590062E001 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				43D11F861908A5590062E001 /* MultipeerNTPTests-Info.plist */,
+				43D11F871908A5590062E001 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		43D11F5B1908A5580062E001 /* MultipeerNTP */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 43D11F8E1908A5590062E001 /* Build configuration list for PBXNativeTarget "MultipeerNTP" */;
+			buildPhases = (
+				43D11F581908A5580062E001 /* Sources */,
+				43D11F591908A5580062E001 /* Frameworks */,
+				43D11F5A1908A5580062E001 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MultipeerNTP;
+			productName = MultipeerNTP;
+			productReference = 43D11F5C1908A5580062E001 /* MultipeerNTP.app */;
+			productType = "com.apple.product-type.application";
+		};
+		43D11F7C1908A5580062E001 /* MultipeerNTPTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 43D11F911908A5590062E001 /* Build configuration list for PBXNativeTarget "MultipeerNTPTests" */;
+			buildPhases = (
+				43D11F791908A5580062E001 /* Sources */,
+				43D11F7A1908A5580062E001 /* Frameworks */,
+				43D11F7B1908A5580062E001 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				43D11F831908A5580062E001 /* PBXTargetDependency */,
+			);
+			name = MultipeerNTPTests;
+			productName = MultipeerNTPTests;
+			productReference = 43D11F7D1908A5580062E001 /* MultipeerNTPTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		43D11F541908A5580062E001 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = BR;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Bektur Ryskeldiev";
+				TargetAttributes = {
+					43D11F7C1908A5580062E001 = {
+						TestTargetID = 43D11F5B1908A5580062E001;
+					};
+				};
+			};
+			buildConfigurationList = 43D11F571908A5580062E001 /* Build configuration list for PBXProject "MultipeerNTP" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 43D11F531908A5580062E001;
+			productRefGroup = 43D11F5D1908A5580062E001 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				43D11F5B1908A5580062E001 /* MultipeerNTP */,
+				43D11F7C1908A5580062E001 /* MultipeerNTPTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		43D11F5A1908A5580062E001 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43D11F781908A5580062E001 /* Images.xcassets in Resources */,
+				43D11F6A1908A5580062E001 /* InfoPlist.strings in Resources */,
+				43D11F731908A5580062E001 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		43D11F7B1908A5580062E001 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43D11F891908A5590062E001 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		43D11F581908A5580062E001 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43D11F761908A5580062E001 /* BRViewController.m in Sources */,
+				43D11F701908A5580062E001 /* BRAppDelegate.m in Sources */,
+				43D11F6C1908A5580062E001 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		43D11F791908A5580062E001 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43D11F8B1908A5590062E001 /* MultipeerNTPTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		43D11F831908A5580062E001 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 43D11F5B1908A5580062E001 /* MultipeerNTP */;
+			targetProxy = 43D11F821908A5580062E001 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		43D11F681908A5580062E001 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				43D11F691908A5580062E001 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		43D11F711908A5580062E001 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				43D11F721908A5580062E001 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		43D11F871908A5590062E001 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				43D11F881908A5590062E001 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		43D11F8C1908A5590062E001 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		43D11F8D1908A5590062E001 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		43D11F8F1908A5590062E001 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MultipeerNTP/MultipeerNTP-Prefix.pch";
+				INFOPLIST_FILE = "MultipeerNTP/MultipeerNTP-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		43D11F901908A5590062E001 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MultipeerNTP/MultipeerNTP-Prefix.pch";
+				INFOPLIST_FILE = "MultipeerNTP/MultipeerNTP-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		43D11F921908A5590062E001 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MultipeerNTP.app/MultipeerNTP";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MultipeerNTP/MultipeerNTP-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "MultipeerNTPTests/MultipeerNTPTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		43D11F931908A5590062E001 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MultipeerNTP.app/MultipeerNTP";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MultipeerNTP/MultipeerNTP-Prefix.pch";
+				INFOPLIST_FILE = "MultipeerNTPTests/MultipeerNTPTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		43D11F571908A5580062E001 /* Build configuration list for PBXProject "MultipeerNTP" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				43D11F8C1908A5590062E001 /* Debug */,
+				43D11F8D1908A5590062E001 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		43D11F8E1908A5590062E001 /* Build configuration list for PBXNativeTarget "MultipeerNTP" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				43D11F8F1908A5590062E001 /* Debug */,
+				43D11F901908A5590062E001 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		43D11F911908A5590062E001 /* Build configuration list for PBXNativeTarget "MultipeerNTPTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				43D11F921908A5590062E001 /* Debug */,
+				43D11F931908A5590062E001 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 43D11F541908A5580062E001 /* Project object */;
+}
