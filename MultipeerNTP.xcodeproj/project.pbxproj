@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		0257CCD5D055479D8AB6B495 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 892CCA5493384512BB0D05D5 /* libPods.a */; };
 		4349F0EE190E4BC9007DE304 /* metronome.wav in Resources */ = {isa = PBXBuildFile; fileRef = 4349F0ED190E4BC9007DE304 /* metronome.wav */; };
+		4349F0F3190FC5ED007DE304 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4349F0F2190FC5ED007DE304 /* AudioToolbox.framework */; };
+		4349F0F5190FC5F0007DE304 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4349F0F4190FC5F0007DE304 /* AVFoundation.framework */; };
+		4349F0F7190FCDF5007DE304 /* ntp.hosts in Resources */ = {isa = PBXBuildFile; fileRef = 4349F0F6190FCDF5007DE304 /* ntp.hosts */; };
 		43D11F601908A5580062E001 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43D11F5F1908A5580062E001 /* Foundation.framework */; };
 		43D11F621908A5580062E001 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43D11F611908A5580062E001 /* CoreGraphics.framework */; };
 		43D11F641908A5580062E001 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43D11F631908A5580062E001 /* UIKit.framework */; };
@@ -43,6 +46,9 @@
 
 /* Begin PBXFileReference section */
 		4349F0ED190E4BC9007DE304 /* metronome.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = metronome.wav; path = MultipeerNTPTests/metronome.wav; sourceTree = SOURCE_ROOT; };
+		4349F0F2190FC5ED007DE304 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		4349F0F4190FC5F0007DE304 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		4349F0F6190FCDF5007DE304 /* ntp.hosts */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ntp.hosts; sourceTree = "<group>"; };
 		43D11F5C1908A5580062E001 /* MultipeerNTP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MultipeerNTP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43D11F5F1908A5580062E001 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		43D11F611908A5580062E001 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -82,6 +88,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4349F0F5190FC5F0007DE304 /* AVFoundation.framework in Frameworks */,
+				4349F0F3190FC5ED007DE304 /* AudioToolbox.framework in Frameworks */,
 				43D11FA41908A70D0062E001 /* MultipeerConnectivity.framework in Frameworks */,
 				43D11F621908A5580062E001 /* CoreGraphics.framework in Frameworks */,
 				43D11F641908A5580062E001 /* UIKit.framework in Frameworks */,
@@ -127,6 +135,8 @@
 		43D11F5E1908A5580062E001 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4349F0F4190FC5F0007DE304 /* AVFoundation.framework */,
+				4349F0F2190FC5ED007DE304 /* AudioToolbox.framework */,
 				43D11FA31908A70D0062E001 /* MultipeerConnectivity.framework */,
 				43D11F5F1908A5580062E001 /* Foundation.framework */,
 				43D11F611908A5580062E001 /* CoreGraphics.framework */,
@@ -155,6 +165,7 @@
 		43D11F661908A5580062E001 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				4349F0F6190FCDF5007DE304 /* ntp.hosts */,
 				4349F0ED190E4BC9007DE304 /* metronome.wav */,
 				43D11F671908A5580062E001 /* MultipeerNTP-Info.plist */,
 				43D11F681908A5580062E001 /* InfoPlist.strings */,
@@ -303,6 +314,7 @@
 			files = (
 				43D11F781908A5580062E001 /* Images.xcassets in Resources */,
 				43D11F6A1908A5580062E001 /* InfoPlist.strings in Resources */,
+				4349F0F7190FCDF5007DE304 /* ntp.hosts in Resources */,
 				43D11F731908A5580062E001 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

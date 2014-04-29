@@ -17,9 +17,9 @@
     IBOutlet UILabel *_labelStreamingSourceDelay;
 }
 
-
 - (IBAction)connectButtonPressed:(id)sender;
 - (IBAction)startButtonPressed:(id)sender;
 - (IBAction)stopButtonPressed:(id)sender;
+- (IBAction)timeButtonPressed:(id)sender;
 
 @end

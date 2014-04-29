@@ -15,6 +15,10 @@ extern NSString * const kMessageNetworkTimeKey;
 extern NSString * const kMessageDeviceTimeKey;
 extern NSString * const kMessageCommandKey;
 
+extern NSString * const kMessageCommandStart;
+extern NSString * const kMessageCommandStop;
+extern NSString * const kMessageCommandTime;
+
 extern NSString * const kNotificationMessageReceived;
 extern NSString * const kNotificationMessageDictKey;
 extern NSString * const kNotificationMessageTimeKey;

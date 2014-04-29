@@ -12,7 +12,8 @@
 
 @interface BRConnectivityManager : NSObject
 
-- (instancetype)initWithDisplayName:(NSString *) name;
++ (BRConnectivityManager *)sharedInstance;
+
 - (MCBrowserViewController *)getBrowserViewControllerForServiceType:(NSString *) serviceType
                                                        withDelegate:(id<MCBrowserViewControllerDelegate>) delegate;
 
@@ -21,10 +22,9 @@
 
 - (NSArray *)connectedPeers;
 
-- (void)sendData:(NSData *) data;
 - (void)sendOutputStream:(NSOutputStream *) stream toPeer:(MCPeerID *)peer;
 
-- (void)sendStartMessageWithNetworkTime: (NSDate *) networkTime;
-- (void)sendStopMessageWithNetworkTime: (NSDate *) networkTime;
+- (void)sendMessage: (NSString *) message
+    withNetworkTime: (NSDate *) networkTime;
 
 @end

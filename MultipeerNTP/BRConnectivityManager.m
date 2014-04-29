@@ -17,11 +17,26 @@
     NSMutableArray *_connectedPeers;
 }
 
+- (instancetype)initWithDisplayName:(NSString *) name;
+
 @end
 
 @implementation BRConnectivityManager
 
 #pragma mark - Initialization and setup
+
++ (BRConnectivityManager *)sharedInstance
+{
+    static BRConnectivityManager *_sharedInstance = nil;
+    static dispatch_once_t oncePredicate;
+    
+    
+    dispatch_once(&oncePredicate, ^{
+        _sharedInstance = [[BRConnectivityManager alloc] initWithDisplayName:[[UIDevice currentDevice] name]];
+    });
+    return _sharedInstance;
+}
+
 
 - (instancetype)initWithDisplayName:(NSString *) name;
 {
@@ -76,6 +91,7 @@
     if (state == MCSessionStateConnected)
     {
         NSLog(@"Peer connected:%@", peerID.displayName);
+        [_connectedPeers addObject:peerID];
     }
     else if (state == MCSessionStateConnecting)
     {
@@ -84,6 +100,7 @@
     else if (state == MCSessionStateNotConnected)
     {
         NSLog(@"Peer disconnected:%@", peerID.displayName);
+        [_connectedPeers removeObject:peerID];
     }
 }
 
@@ -125,16 +142,38 @@
     
 }
 
-#pragma mark - Sending messages
+#pragma mark - Streaming
 
-- (void)sendStartMessageWithNetworkTime: (NSDate *) networkTime
+- (void)sendOutputStream:(NSOutputStream *) stream toPeer:(MCPeerID *)peer
 {
     
 }
 
-- (void)sendStopMessageWithNetworkTime: (NSDate *) networkTime
+#pragma mark - Sending messages
+
+- (void)sendMessage: (NSString *) message
+    withNetworkTime: (NSDate *) networkTime
 {
+    NSDictionary *messageDictionary = @{kMessageNetworkTimeKey: [NSNumber numberWithFloat:[networkTime timeIntervalSince1970]],
+                                        kMessageDeviceTimeKey:  [NSNumber numberWithFloat:[[NSDate date] timeIntervalSince1970]],
+                                        kMessageCommandKey:     message};
+    NSError *error = nil;
+    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:messageDictionary options:NSJSONWritingPrettyPrinted error:&error];
     
+    if (error == nil)
+    {
+        if (![_session sendData:jsonData
+                        toPeers:_connectedPeers
+                       withMode:MCSessionSendDataReliable
+                          error:&error])
+        {
+            NSLog(@"%@ message sending error: %@", message, error.description);
+        }
+    }
+    else
+    {
+        NSLog(@"JSON error: %@", error.description);
+    }
 }
 
 
