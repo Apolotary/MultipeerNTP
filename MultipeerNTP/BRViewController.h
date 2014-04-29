@@ -13,7 +13,6 @@
     IBOutlet UILabel *_labelSystemTime;
     IBOutlet UILabel *_labelNetworkTime;
     IBOutlet UILabel *_labelNetworkDelay;
-    IBOutlet UILabel *_labelStreamingSourceTime;
     IBOutlet UILabel *_labelStreamingSourceDelay;
 }
 

@@ -7,6 +7,7 @@
 //
 
 #import "BRAppDelegate.h"
+#import "NetworkClock.h"
 
 @implementation BRAppDelegate
 
@@ -40,7 +41,7 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application
 {
-    // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    [[NetworkClock sharedInstance] finishAssociations];
 }
 
 @end

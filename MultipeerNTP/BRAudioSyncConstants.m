@@ -8,8 +8,8 @@
 
 #import "BRAudioSyncConstants.h"
 
-NSString * const kSessionType = @"BRAudioSyncSession";
-NSString * const kServiceType = @"BRAudioSyncService";
+NSString * const kSessionType = @"bras-session";
+NSString * const kServiceType = @"bras-service";
 
 NSString * const kMessageNetworkTimeKey = @"MessageNetworkTimeKey";
 NSString * const kMessageDeviceTimeKey  = @"MessageDeviceTimeKey";
