@@ -9,5 +9,17 @@
 #import <UIKit/UIKit.h>
 
 @interface BRViewController : UIViewController
+{
+    IBOutlet UILabel *_labelSystemTime;
+    IBOutlet UILabel *_labelNetworkTime;
+    IBOutlet UILabel *_labelNetworkDelay;
+    IBOutlet UILabel *_labelStreamingSourceTime;
+    IBOutlet UILabel *_labelStreamingSourceDelay;
+}
+
+
+- (IBAction)connectButtonPressed:(id)sender;
+- (IBAction)startButtonPressed:(id)sender;
+- (IBAction)stopButtonPressed:(id)sender;
 
 @end

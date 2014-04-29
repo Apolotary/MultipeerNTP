@@ -255,9 +255,14 @@
 #pragma mark                        S I N G L E T O N • B E H A V I O U R
 
 + (NetworkClock *) sharedInstance {
-    DEFINE_SHARED_INSTANCE_USING_BLOCK(^{
-        return [[self alloc] init];
+    static NetworkClock *_sharedInstance = nil;
+    static dispatch_once_t oncePredicate;
+    
+
+    dispatch_once(&oncePredicate, ^{
+        _sharedInstance = [[NetworkClock alloc] init];
     });
+    return _sharedInstance;
 }
 
 @end

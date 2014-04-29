@@ -7,6 +7,7 @@
 //
 
 #import "BRViewController.h"
+#import "BRAudioSyncConstants.h"
 
 @interface BRViewController ()
 
