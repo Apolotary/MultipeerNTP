@@ -22,6 +22,7 @@ extern NSString * const kMessageCommandTime;
 extern NSString * const kNotificationMessageReceived;
 extern NSString * const kNotificationMessageDictKey;
 extern NSString * const kNotificationMessageTimeKey;
+extern NSString * const kNotificationMessageNTPTimeKey;
 
 @interface BRAudioSyncConstants : NSObject
 

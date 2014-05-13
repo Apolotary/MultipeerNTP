@@ -14,6 +14,7 @@
     IBOutlet UILabel *_labelNetworkTime;
     IBOutlet UILabel *_labelNetworkDelay;
     IBOutlet UILabel *_labelStreamingSourceDelay;
+    IBOutlet UILabel *_labelStreamingSourceNetworkDelay;
 }
 
 - (IBAction)connectButtonPressed:(id)sender;

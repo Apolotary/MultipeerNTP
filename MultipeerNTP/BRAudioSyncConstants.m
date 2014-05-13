@@ -22,6 +22,7 @@ NSString * const kMessageCommandTime    = @"MessageCommandTime";
 NSString * const kNotificationMessageReceived = @"NotificationMessageReceived";
 NSString * const kNotificationMessageDictKey  = @"NotificationMessageDictKey";
 NSString * const kNotificationMessageTimeKey  = @"NotificationMessageTimeKey"; // time when the message was received
+NSString * const kNotificationMessageNTPTimeKey = @"NotificationMessageNTPTimeKey"; // NTP time when the message was received
 
 @implementation BRAudioSyncConstants
 

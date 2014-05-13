@@ -8,6 +8,7 @@
 
 #import "BRConnectivityManager.h"
 #import "BRAudioSyncConstants.h"
+#import "NetworkClock.h"
 
 @interface BRConnectivityManager () <MCSessionDelegate>
 {
@@ -108,6 +109,7 @@
 - (void)session:(MCSession *)session didReceiveData:(NSData *)data fromPeer:(MCPeerID *)peerID
 {
     NSDate *receivingTime = [NSDate date];
+    NSDate *receivingNTPTime = [[NetworkClock sharedInstance] networkTime];
     NSError *error = nil;
     NSDictionary *jsonDict = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&error];
     
@@ -116,7 +118,8 @@
         [[NSNotificationCenter defaultCenter] postNotificationName:kNotificationMessageReceived
                                                             object:nil
                                                           userInfo:@{kNotificationMessageDictKey : jsonDict,
-                                                                     kNotificationMessageTimeKey : receivingTime}];
+                                                                     kNotificationMessageTimeKey : receivingTime,
+                                                                     kNotificationMessageNTPTimeKey: receivingNTPTime}];
     }
     else
     {
@@ -154,8 +157,8 @@
 - (void)sendMessage: (NSString *) message
     withNetworkTime: (NSDate *) networkTime
 {
-    NSDictionary *messageDictionary = @{kMessageNetworkTimeKey: [NSNumber numberWithFloat:[networkTime timeIntervalSince1970]],
-                                        kMessageDeviceTimeKey:  [NSNumber numberWithFloat:[[NSDate date] timeIntervalSince1970]],
+    NSDictionary *messageDictionary = @{kMessageNetworkTimeKey: [NSNumber numberWithDouble:[networkTime timeIntervalSince1970]],
+                                        kMessageDeviceTimeKey:  [NSNumber numberWithDouble:[[NSDate date] timeIntervalSince1970]],
                                         kMessageCommandKey:     message};
     NSError *error = nil;
     NSData *jsonData = [NSJSONSerialization dataWithJSONObject:messageDictionary options:NSJSONWritingPrettyPrinted error:&error];

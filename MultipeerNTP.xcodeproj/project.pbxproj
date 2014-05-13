@@ -32,6 +32,7 @@
 		43D11FA41908A70D0062E001 /* MultipeerConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43D11FA31908A70D0062E001 /* MultipeerConnectivity.framework */; };
 		43D11FA71908A7C90062E001 /* BRConnectivityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 43D11FA61908A7C90062E001 /* BRConnectivityManager.m */; };
 		43D11FAA1908B5F70062E001 /* BRAudioSyncConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 43D11FA91908B5F70062E001 /* BRAudioSyncConstants.m */; };
+		43F00D091920D8B00080C629 /* BRAudioManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 43F00D081920D8B00080C629 /* BRAudioManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +80,8 @@
 		43D11FA61908A7C90062E001 /* BRConnectivityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRConnectivityManager.m; sourceTree = "<group>"; };
 		43D11FA81908B5F70062E001 /* BRAudioSyncConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRAudioSyncConstants.h; sourceTree = "<group>"; };
 		43D11FA91908B5F70062E001 /* BRAudioSyncConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRAudioSyncConstants.m; sourceTree = "<group>"; };
+		43F00D071920D8B00080C629 /* BRAudioManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRAudioManager.h; sourceTree = "<group>"; };
+		43F00D081920D8B00080C629 /* BRAudioManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRAudioManager.m; sourceTree = "<group>"; };
 		892CCA5493384512BB0D05D5 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		C18C86BBD45D454A89C1673C /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -207,6 +210,8 @@
 			children = (
 				43D11FA51908A7C90062E001 /* BRConnectivityManager.h */,
 				43D11FA61908A7C90062E001 /* BRConnectivityManager.m */,
+				43F00D071920D8B00080C629 /* BRAudioManager.h */,
+				43F00D081920D8B00080C629 /* BRAudioManager.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -372,6 +377,7 @@
 				43D11FAA1908B5F70062E001 /* BRAudioSyncConstants.m in Sources */,
 				43D11F9E1908A5FA0062E001 /* NetworkClock.m in Sources */,
 				43D11F701908A5580062E001 /* BRAppDelegate.m in Sources */,
+				43F00D091920D8B00080C629 /* BRAudioManager.m in Sources */,
 				43D11FA71908A7C90062E001 /* BRConnectivityManager.m in Sources */,
 				43D11F6C1908A5580062E001 /* main.m in Sources */,
 				43D11F9F1908A5FA0062E001 /* NetAssociation.m in Sources */,

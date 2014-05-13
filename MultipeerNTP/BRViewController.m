@@ -16,6 +16,10 @@
     BRConnectivityManager *_connectivityManager;
     NetworkClock *_networkClock;
     NSTimer *_mainTimer;
+    NSTimeInterval _maxNTPDelay;
+    NSTimeInterval _minNTPDelay;
+    NSTimeInterval _maxDeviceDelay;
+    NSTimeInterval _minDeviceDelay;
 }
 
 - (void) messageNotificationReceived: (NSNotification *) notification;
@@ -60,25 +64,37 @@
 
 - (void) messageNotificationReceived: (NSNotification *) notification
 {
-    NSDictionary *messageDictionary = [notification.userInfo objectForKey:kNotificationMessageDictKey];
-    NSDate *receivedDate = [notification.userInfo objectForKey:kNotificationMessageTimeKey];
-    
-    NSLog(@"Received message at: %@", receivedDate);
-    
-    NSString *remoteMessage = [messageDictionary objectForKey:kMessageCommandKey];
-    
-    if ([remoteMessage isEqualToString:kMessageCommandTime])
-    {
+    dispatch_async(dispatch_get_main_queue(), ^{
+        NSDictionary *messageDictionary = [notification.userInfo objectForKey:kNotificationMessageDictKey];
+        NSDate *receivedDate = [notification.userInfo objectForKey:kNotificationMessageTimeKey];
+        NSDate *receivedNTPDate = [notification.userInfo objectForKey:kNotificationMessageNTPTimeKey];
         
-    }
-    else if ([remoteMessage isEqualToString:kMessageCommandStart])
-    {
+        NSTimeInterval remoteTime = [[messageDictionary objectForKey:kMessageDeviceTimeKey] doubleValue];
+        NSDate *remoteDeviceTime = [NSDate dateWithTimeIntervalSince1970:remoteTime];
         
-    }
-    else if ([remoteMessage isEqualToString:kMessageCommandStop])
-    {
+        NSTimeInterval remoteNTPTime = [[messageDictionary objectForKey:kMessageNetworkTimeKey] doubleValue];
+        NSDate *remoteNTPDate = [NSDate dateWithTimeIntervalSince1970:remoteNTPTime];
         
-    }
+        NSLog(@"Received message at: %@", receivedDate);
+        
+        NSString *remoteMessage = [messageDictionary objectForKey:kMessageCommandKey];
+        
+        if ([remoteMessage isEqualToString:kMessageCommandTime])
+        {
+            NSTimeInterval deviceTimeDifference = [remoteDeviceTime timeIntervalSinceDate:receivedDate];
+            NSTimeInterval ntpTimeDifference = [remoteNTPDate timeIntervalSinceDate:receivedNTPDate];
+            [_labelStreamingSourceDelay setText:[NSString stringWithFormat:@"Device-Device Delay: %5.3f", deviceTimeDifference]];
+            [_labelStreamingSourceNetworkDelay setText:[NSString stringWithFormat:@"Device-Device Network Delay: %5.3f", ntpTimeDifference]];
+        }
+        else if ([remoteMessage isEqualToString:kMessageCommandStart])
+        {
+            
+        }
+        else if ([remoteMessage isEqualToString:kMessageCommandStop])
+        {
+            
+        }
+    });
 }
 
 - (void) addObservers
@@ -95,6 +111,8 @@
 
 - (void) updateLocalTimeLabels
 {
+    [_connectivityManager sendMessage:kMessageCommandTime withNetworkTime:[_networkClock networkTime]];
+    
     NSDate *systemTime = [NSDate date];
     NSDate *networkTime = [_networkClock networkTime];
     
@@ -126,7 +144,7 @@
 
 - (IBAction)timeButtonPressed:(id)sender
 {
-    
+    [_connectivityManager sendMessage:kMessageCommandTime withNetworkTime:[_networkClock networkTime]];
 }
 
 #pragma mark - MCBrowserViewControllerDelegate methods
